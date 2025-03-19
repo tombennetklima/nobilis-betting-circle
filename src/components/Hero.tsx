@@ -34,7 +34,7 @@ const Hero = () => {
   return (
     <div 
       ref={heroRef}
-      className="relative min-h-[90vh] pt-24 pb-16 px-6 flex flex-col justify-center overflow-hidden"
+      className="relative min-h-[80vh] pt-24 pb-16 px-6 flex flex-col justify-center overflow-hidden"
     >
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-navy-50 rounded-bl-[200px] -z-10 opacity-70" />
@@ -43,23 +43,23 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-navy-200 to-transparent" />
       
       <div className="max-w-7xl mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-6">
-              <h1 className="opacity-0 animate-on-scroll font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
+              <h1 className="opacity-0 animate-on-scroll font-sans text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">
                 Nobilis Circle –<br/>
-                <span className="text-gradient">Deine Plattform</span> für<br/>
-                Matched Betting
+                <span className="text-gradient">Matched Betting</span><br/>
+                Plattform
               </h1>
               
-              <p className="opacity-0 animate-on-scroll text-lg md:text-xl text-slate-700 max-w-xl">
-                Profitiere von der wohl weltweit sichersten Sportwetten-Tippgemeinschaft und nutze eine erprobte Strategie, um dir ein nachhaltiges Einkommen aufzubauen.
+              <p className="opacity-0 animate-on-scroll text-lg text-slate-700 max-w-xl">
+                Baue dir ein nachhaltiges Einkommen auf – ohne Vorkenntnisse, vollkommen ortsunabhängig.
               </p>
             </div>
             
             <div className="opacity-0 animate-on-scroll flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <a
-                href="#"
+                href="/participation"
                 className="px-6 py-3 rounded-md bg-primary text-white font-medium transition-all hover:bg-primary/90 active:scale-95 flex items-center gap-2 group"
               >
                 Jetzt Starten
@@ -74,72 +74,29 @@ const Hero = () => {
                 <ArrowRight size={16} className="text-primary" />
               </a>
             </div>
-            
-            <div className="opacity-0 animate-on-scroll">
-              <div className="flex items-center gap-3">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 rounded-full border-2 border-white bg-navy-100 flex items-center justify-center text-navy-800 font-semibold text-xs"
-                    >
-                      {i}
-                    </div>
-                  ))}
-                </div>
-                <div className="text-sm text-slate-600">
-                  <span className="font-medium text-slate-900">+1.000</span> zufriedene Teilnehmer
-                </div>
-              </div>
-            </div>
           </div>
           
           <div className="relative opacity-0 animate-on-scroll">
-            <div className="aspect-square max-w-lg mx-auto glass-card rounded-2xl p-8 relative z-10 overflow-hidden">
+            <div className="aspect-square max-w-md mx-auto glass-card rounded-2xl p-6 relative z-10 overflow-hidden">
               <div className="absolute -top-20 -right-20 w-40 h-40 bg-navy-100 rounded-full opacity-50" />
               <div className="absolute -bottom-16 -left-16 w-32 h-32 bg-navy-100 rounded-full opacity-50" />
               
-              <div className="relative z-20 h-full flex flex-col justify-between">
-                <div>
-                  <h3 className="font-serif text-2xl font-semibold text-slate-900 mb-4">Online Geld Verdienen</h3>
-                  <ul className="space-y-3">
-                    {[
-                      'Ohne Vorkenntnisse starten',
-                      'Vollkommen ortsunabhängig arbeiten',
-                      'Transparente Abläufe',
-                      'Garantierte Gewinne',
-                      'Stabile monatliche Einkommen'
-                    ].map((item, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="mt-1 flex-shrink-0 h-5 w-5 bg-navy-100 rounded-full flex items-center justify-center">
-                          <span className="h-2 w-2 bg-primary rounded-full" />
-                        </span>
-                        <span className="text-slate-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
+              <div className="relative z-20 h-full flex flex-col justify-center items-center">
+                <div className="w-16 h-16 rounded-full bg-navy-50 flex items-center justify-center mb-6">
+                  <span className="text-navy-800 text-2xl font-bold">N</span>
                 </div>
-                
-                <div className="mt-8 pt-6 border-t border-slate-200">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center">
-                        <span className="text-navy-800 text-xs font-bold">⭐</span>
-                      </div>
-                      <div className="text-sm">
-                        <p className="text-slate-900 font-medium">Trustpilot</p>
-                        <p className="text-slate-500 text-xs">5/5 Bewertung</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex">
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <svg key={i} className="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                        </svg>
-                      ))}
-                    </div>
-                  </div>
+                <h2 className="font-sans text-2xl font-semibold text-slate-900 mb-2 text-center">
+                  Sicheres Matched Betting
+                </h2>
+                <p className="text-slate-600 text-center mb-6">
+                  Transparente Abläufe. Garantierte Gewinne.
+                </p>
+                <div className="flex items-center">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <svg key={i} className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
                 </div>
               </div>
             </div>
